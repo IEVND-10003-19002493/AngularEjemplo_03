@@ -33,11 +33,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let producto of productos">
+                    <tr *ngFor="let producto of productos | productoFilter:listFilter">
                         <td></td>
                         <td>{{producto.Modelo | uppercase}}</td>
                         <td>{{producto.Descripcion}}</td>
-                        <td>{{producto.Year}}</td>
+                        <td>{{producto.Year}}</td> 
                         <td>{{producto.Precio | currency}}</td>
                         <td>{{producto.Marca}}</td>
                         <td>{{producto.Color | uppercase}}</td>
